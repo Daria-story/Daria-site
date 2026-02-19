@@ -1,95 +1,85 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<title>Приключения Загадочной Дарьи</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Приключения Загадочной Дарьи</title>
 
-<style>
+  <style>
+    body{
+      margin:0;
+      background:#f3d6e4;
+      font-family: Arial, sans-serif;
+    }
 
-body {
-    margin: 0;
-    background-color: #f3d6e4;
-}
+    .container{
+      position:relative;
+      width:100%;
+      max-width:1200px;
+      margin:0 auto;
+    }
 
-.container {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-}
+    .container img{
+      width:100%;
+      display:block;
+    }
 
-.container img {
-    width: 100%;
-    display: block;
-}
+    /* Невидимые зоны-кнопки поверх картинки */
+    .read-button, .listen-button{
+      position:absolute;
+      display:block;
+      cursor:pointer;
+      z-index:10;
+    }
 
-/* кнопка Читать сказки */
-.read-button {
+    /* Читать сказки (левая кнопка) */
+    .read-button{
+      top:47%;
+      left:30%;
+      width:260px;
+      height:80px;
+    }
 
-    position: absolute;
+    /* Слушать сказки (правая кнопка) */
+    .listen-button{
+      top:47%;
+      left:55%;
+      width:300px;
+      height:80px;
+    }
 
-    top: 48%;
-    left: 32%;
+    /* Продолжить чтение (кнопка под картинкой) */
+    .below{
+      text-align:center;
+      padding:18px 0 30px;
+    }
 
-    width: 180px;
-    height: 50px;
-
-    cursor: pointer;
-}
-
-/* кнопка Слушать сказки */
-.listen-button {
-
-    position: absolute;
-
-    top: 48%;
-    left: 55%;
-
-    width: 200px;
-    height: 50px;
-
-    cursor: pointer;
-}
-
-</style>
-.continue-button {
-
-    display: inline-block;
-    padding: 15px 30px;
-    background: #ffb6d9;
-    border-radius: 15px;
-    text-decoration: none;
-    color: black;
-    font-size: 18px;
-
-}
-
+    .continue-button{
+      display:inline-block;
+      padding:15px 30px;
+      background:#ffb6d9;
+      border-radius:15px;
+      text-decoration:none;
+      color:black;
+      font-size:18px;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
+    <!-- ВАЖНО: имя файла должно совпадать 1-в-1 (регистр букв тоже) -->
+    <img src="daria.jpg" alt="Приключения Загадочной Дарьи" />
 
-<img src="daria.jpg">
+    <a class="read-button" href="daria.html" aria-label="Читать сказки"></a>
+    <a class="listen-button" href="listen.html" aria-label="Слушать сказки"></a>
+  </div>
 
-<div style="text-align:center; margin-top:20px;">
-
-<a href="chapter5.html" class="continue-button">
-📖 Продолжить чтение
-</a>
-
-</div>
-
-
-<a class="read-button" href="daria.html"></a>
-
-<a class="listen-button" href="listen.html"></a>
-
-
-
-
-</div>
-
+  <div class="below">
+    <!-- временно ведём на последнюю главу -->
+    <a class="continue-button" href="chapter5.html">📖 Продолжить чтение</a>
+  </div>
 
 </body>
 </html>
